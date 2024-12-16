@@ -1,8 +1,12 @@
 from pytube import YouTube
-url = 'link video youtube'
+from pytubefix import YouTube
+
+url = 'https://youtu.be/XaXnCpaesco?si=3Ca4-F0yO2F5uNTQ'
+
+downloads_folder = r"C:\Users\HP\Downloads"
+
 video = YouTube(url)
 youtube = video.streams.get_highest_resolution()
-youtube.download()
+# youtube = video.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
 
-# diusahakan download ini --> pip install pytube di cmd setelah itu tulis source code di atas lalu jalankan kalau saya melalui cmd
-# untuk youtube.download() --> itu digunakan untuk mengarahkan file ke mana alias buat video yang akan kita download disimpan di file mana karena 1 file jadi saya kosongkan.
+youtube.download(output_path=downloads_folder)
