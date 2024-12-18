@@ -1,7 +1,7 @@
 from pytube import YouTube
 from pytubefix import YouTube
 
-url = 'https://youtu.be/XaXnCpaesco?si=3Ca4-F0yO2F5uNTQ'
+url = 'link video youtube'
 
 downloads_folder = r"C:\Users\HP\Downloads"
 
